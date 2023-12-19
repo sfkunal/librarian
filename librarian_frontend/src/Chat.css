@@ -1,0 +1,65 @@
+.ChatUI {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+  }
+  
+  .ChatUI .chatContainer {
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  .ChatUI .chatContainer p {
+    max-width: 60%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    align-self: center;
+  }
+  
+  .ChatUI .chatContainer p.user {
+    align-self: flex-end;
+    background-color: #ddd;
+    
+  }
+  
+  .ChatUI .chatContainer p.bot {
+    align-self: flex-start;
+    background-color: #f0f0f0;
+  }
+  
+  .ChatUI .chatContainer p:nth-child(even) {
+    background-color: #ddd;
+  }
+  
+  .ChatUI .inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .ChatUI input {
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Add this rule to position the inputContainer at the bottom */
+  .ChatUI .inputContainer {
+    margin-top: auto;
+  }
+  
