@@ -31,8 +31,7 @@ function UploadCenter({ uploadedFiles, setUploadedFiles }) {
             <label htmlFor="fileUpload" className="custom-file-upload">
                 Choose Library
             </label>
-            <input id="fileUpload" type="file" directory="" webkitdirectory="" onChange={handleUpload} style={{ display: 'none' }} />
-            <div>
+            <input id="fileUpload" type="file" multiple onChange={handleUpload} style={{ display: 'none' }} />            <div>
             {uploadedFiles.length > 0 && (
                 <h3>Uploaded files:</h3>
                 )}
