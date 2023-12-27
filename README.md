@@ -35,6 +35,68 @@ It is technically feasible to have a user log in with Canvas, select the classes
 It is very feasible for users to connect documents from other workspaces (Notion and Google Drive) and import them natively into our Libraries. This allows for higher personalization and context awareness when interacting with this product. 
 
 
+### Backend:
+1. **Programming Language:** Python
+   - Reason: Python has extensive libraries and frameworks suitable for AI/ML development.
+
+2. **Framework:** FastAPI
+   - Reason: FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. It is easy to use and highly performant.
+
+3. **Database:** MongoDB
+   - Reason: MongoDB is a NoSQL database that allows flexibility in handling unstructured data. It is suitable for storing document-based information and can handle large volumes of data efficiently.
+
+4. **AI/ML Framework:** Hugging Face Transformers
+   - Reason: Hugging Face Transformers provides pre-trained models for natural language processing tasks, including the retrieval augmented generation (RAG) algorithm. It's widely used in the NLP community and has good support for model deployment.
+
+5. **Vector Database:** Faiss (Facebook AI Similarity Search)
+   - Reason: Faiss is a library for efficient similarity search and clustering of dense vectors. It's optimized for performance and can handle the indexing and retrieval requirements of the Libraries feature efficiently.
+
+### Frontend:
+1. **Framework:** React.js
+   - Reason: React.js is a popular and efficient JavaScript library for building user interfaces. It allows for the creation of interactive and responsive frontends.
+
+2. **State Management:** Redux
+   - Reason: Redux is a predictable state container for JavaScript apps, which can help manage the state of the application in a consistent way, especially when dealing with complex data interactions.
+
+### Chat Interface:
+1. **Chatbot Framework:** Rasa
+   - Reason: Rasa is an open-source natural language processing framework that allows for the building of chatbots. It provides advanced natural language understanding capabilities.
+
+### Integrations:
+1. **Canvas Integration:**
+   - Utilize Canvas API for authentication and document retrieval.
+   - Develop a custom module to handle the import of documents from Canvas into the Libraries.
+
+2. **Notion/Google Drive Integration:**
+   - Use Notion and Google Drive APIs for authentication and document retrieval.
+   - Develop modules to import documents from these platforms into Libraries.
+
+### Additional Tools:
+1. **Document Viewer:**
+   - Integrate a document viewer using a tool like PDF.js for PDFs and other relevant libraries for different document types.
+
+### Cloud Services:
+1. **Hosting:** AWS (Amazon Web Services)
+   - Reason: AWS provides a wide range of services, including compute, storage, and AI/ML services, making it suitable for hosting and scaling the application.
+
+2. **Authentication:** OAuth 2.0 for Canvas and Google OAuth for Notion/Google Drive.
+   - Reason: Standardized authentication protocols for secure integration with external platforms.
+
+3. **Containerization:** Docker
+   - Reason: Docker containers provide a consistent and reproducible environment for the application, making deployment and scaling more straightforward.
+
+4. **Orchestration:** Docker Compose or Kubernetes
+   - Reason: For managing and orchestrating multiple containers.
+
+### DevOps:
+1. **Version Control:** Git (GitHub or GitLab)
+   - Reason: Standard version control for collaborative development.
+
+2. **Continuous Integration/Continuous Deployment (CI/CD):** Jenkins or GitLab CI
+   - Reason: Automate the testing and deployment processes.
+
+3. **Monitoring:** Prometheus and Grafana
+   - Reason: For monitoring the performance and health of the application.
 
 
 # Setup
