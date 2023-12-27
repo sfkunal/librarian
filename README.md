@@ -33,10 +33,7 @@ I've thought a lot about what the core components of this product would be, and 
 It is technically feasible to have a user log in with Canvas, select the classes they want to import, and literally import every document from their Canvas course into a Library. The average course holds at least 30-40 informative documents that can be leveraged for content mastery. This personal integration is probably the biggest advantage we have.
 ##### Notion/Google Drive Integration
 It is very feasible for users to connect documents from other workspaces (Notion and Google Drive) and import them natively into our Libraries. This allows for higher personalization and context awareness when interacting with this product. 
-##### Key Distinctions
-One key technical distinction I want to make note of is a large difference between this product and traditional RAG-based chatbots (the ones companies are utilizing to make use of their large document corpus).
 
-AWS and Azure AI are selling technology that make RAG easily implementable but **specifically for one huge knowledge base**. It's too costly on them to have the Libraries setup that we have since every time a Library is set up, it needs to be indexed as a knowledge base and sent to a vector database. AWS and Azure don't want to do this many times for a single user in a single session, so they've declared it out of scope for their product. Doesn't matter, I can still build it without them.
 
 
 
