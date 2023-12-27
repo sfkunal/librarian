@@ -1,4 +1,46 @@
 # Librarian
+##### Kunal Srivastava
+### Problem
+Students are generally and consistently unaware of recently-made tools allowing them to leverage their own work in their learning. 
+
+AI is changing the workforce -- studies show that technologies like CoPilot and GPTs can increase engineer productivity by up to 4 times. Academia has had an interesting response to this generative AI cycle, defaulting to defensive ideas like academic dishonesty, and a natural preference to adhere to the native guidelines that have held up academia for so long. 
+
+I, along with other technology enthusiasts, believe the whole world of education is nearing a turning point. Education is going to flip on its head, through the transition of public education to private education. Before, due to limited resources like money and teachers, privatized education for every student in a equalized, accessible manner was not possible. 
+
+However, given the appearance of AI tooling (generally speaking to generative AI that produces an output given input), we will most definitely see a rise in private AI education. It's just a more personalized way to teach. Students will simply learn more, in less time. In the end, data leads to insights. And traditional teachers just don't (1) have the brain power to hold historical learning data of every single student and (2) adopt their teaching styles to each individual student. Unlike traditional teachers, computers now have the ability to do both (1) and (2) at extremely high accuracies. 
+
+### Solution
+I'm going to build a generative AI platform for students. By incorporating student-specific integrations (so far Canvas and Notion), this platform will have additional user-specific context. I will employ a technique called Retrieval Augmented Generation (RAG) to reduce the knowledge context of an LLM to this additional user-specific context. This means that LLMs on-platform will **only** be an expert in the imported integrated content. 
+
+#### Inefficiencies Students Face
+1. Usually, once I write something, I don't read it ever again
+2. It's really hard to locate specific *ideas* across my edu-verse (edu-verse: all virtual locations of my work)
+3. Studying! Imagine if I could use my previous documents to generate future documents to aide my learning. That's powerful.
+#### Product
+##### Libraries
+Users will have access to the Libraries feature. This feature allows them to upload their own documents (.pdf, .doc, .ppt, .md, and more). These libraries are uploaded as context knowledge bases to our backend, thus allowing the user to effectively query these libraries like chatbots at high accuracies and low hallucination rates
+##### Document Viewer
+We also want to incorporate a document viewer into the product. This is an extremely important feature because it connects our new (and potentially foreign) product to a student's past work. They can see the document in question in the viewer, and additionally we can highlight/cite specific parts of this viewable document to provide evidence when the user is conversing with the chatbot. 
+##### Chat Interface
+I want to create a chat interface, that given a large corpus of relevant historical data, supports these 3 broad features:
+
+1. Find (an idea, given Libraries)
+2. Create (study material, given Libraries)
+3. Answer (given Libraries)
+
+I've thought a lot about what the core components of this product would be, and I really think that value comes down to these three. Current AI systems can only do (3), but even then at hallucinatory levels. By reducing context down to only the Libraries, chatbots can become increasingly accurate. 
+##### Canvas Integration
+It is technically feasible to have a user log in with Canvas, select the classes they want to import, and literally import every document from their Canvas course into a Library. The average course holds at least 30-40 informative documents that can be leveraged for content mastery. This personal integration is probably the biggest advantage we have.
+##### Notion/Google Drive Integration
+It is very feasible for users to connect documents from other workspaces (Notion and Google Drive) and import them natively into our Libraries. This allows for higher personalization and context awareness when interacting with this product. 
+##### Key Distinctions
+One key technical distinction I want to make note of is a large difference between this product and traditional RAG-based chatbots (the ones companies are utilizing to make use of their large document corpus).
+
+AWS and Azure AI are selling technology that make RAG easily implementable but **specifically for one huge knowledge base**. It's too costly on them to have the Libraries setup that we have since every time a Library is set up, it needs to be indexed as a knowledge base and sent to a vector database. AWS and Azure don't want to do this many times for a single user in a single session, so they've declared it out of scope for their product. Doesn't matter, I can still build it without them.
+
+
+
+# Setup
 
 To get started with Librarian, follow the steps below to set up the backend and frontend components.
 
